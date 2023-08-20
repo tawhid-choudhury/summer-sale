@@ -62,10 +62,7 @@ document.getElementById("mainCA").addEventListener("click", function () {
     window.alert("INCORRECT CODE");
   }
 });
-// MAIN FUNCTIONS END
-//
-//
-//
+
 function updateSecondaryBtnCA() {
   document.getElementById("secondaryCA").disabled =
     document.getElementById("mainCA").disabled;
