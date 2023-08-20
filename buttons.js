@@ -57,6 +57,7 @@ document.getElementById("mainCA").addEventListener("click", function () {
     updateSecondary();
     updateDisplay();
     document.getElementById("mainCInput").value = "";
+    document.getElementById("secondaryCInput").value = "";
   } else {
     window.alert("INCORRECT CODE");
   }

@@ -295,7 +295,7 @@
                                 class="max-w-[194px] border-[1px] p-4 rounded-l-lg" type="text"
                                 placeholder="Coupon code">
                             <button id="mainCA"
-                                class=" font-semibold text-white bg-[var(--pnk)]  px-[22px] py-[16px] rounded-r-lg hover:bg-[#0FA2EA] disabled:bg-gray-500 disabled:text-gray-300"
+                                class=" font-semibold text-white bg-[var(--pnk)] px-[10px] md:px-[22px] py-[16px] rounded-r-lg hover:bg-[#0FA2EA] disabled:bg-gray-500 disabled:text-gray-300"
                                 disabled>Apply</button>
                         </div>
                     </div>
@@ -313,10 +313,10 @@
                             <h3 class="font-semibold">Total: <span class="text-[#11111180]">00.00 Tk</span></h3>
                         </div>
                         <hr>
-                        <div class="text-center relative">
+                        <div class="text-center md:relative">
                             <h1>&nbsp;</h1>
                             <button onclick="my_modal_1.showModal()" id="mainMP"
-                                class=" w-[294px] font-semibold text-white bg-[var(--pnk)]  px-[22px] py-[16px] rounded-lg absolute -bottom-14 left-0 hover:bg-[#0FA2EA] disabled:bg-gray-500 disabled:text-gray-300"
+                                class=" md:w-[294px] font-semibold text-white bg-[var(--pnk)]  px-[22px] py-[16px] rounded-lg md:absolute -bottom-14 left-0 hover:bg-[#0FA2EA] disabled:bg-gray-500 disabled:text-gray-300"
                                 disabled>
                                 Make Purchase
                             </button>
@@ -328,7 +328,7 @@
                                         <div class="m-auto">
                                             <img src="./images/congo.png" alt="congo">
                                         </div>
-                                        <h3 class="font-bold text-3xl md:text-5xl font-bold mt-10">Congratulations</h3>
+                                        <h3 class="font-bold text-3xl md:text-5xl mt-10">Congratulations</h3>
                                         <p class="py-4 text-[#11111180] text-xl">You Have Purchased the Products</p>
                                         <div class="modal-action justify-center -mt-3">
                                             <!-- if there is a button in form, it will close the modal -->
@@ -344,28 +344,28 @@
                 </div>
 
                 <!-- collapsable for tab and mobile -->
-                <div class="fixed top-10 right-0">
-                    <details class="lg:hidden collapse bg-[#0FA2EA] p-1">
+                <div class="fixed top-1 right-0">
+                    <details class="lg:hidden collapse bg-[#e4e4e4f5] rounded-lg">
                         <summary
-                            class="collapse-title text-lg font-medium text-white text-center pr-4 bg-[#00000048] rounded-lg mb-2">
+                            class=" text-2xl font-medium text-white text-center p-4 bg-[var(--pnk)] rounded-lg m-2">
                             <i class="fa-solid fa-cart-shopping"></i>
                         </summary>
-                        <div class="collapse-content">
+                        <div class="collapse-content px-2">
                             <!-- coupon -->
-                            <div class="max-w-[342px] bg-base-100 p-3 md:p-6 rounded-lg">
+                            <div class="max-w-[342px] bg-base-100 px-1 py-3 sm:px-3 md:px-6 rounded-lg mt-3">
                                 <h4 class="text-lg font-normal">Have coupon?</h4>
                                 <div class="flex max-w-[294px] gap-0 mt-4">
                                     <input id="secondaryCInput" onkeyup="ChangeFunction2(this)"
                                         class="max-w-[194px] border-[1px] p-4 rounded-l-lg" type="text"
                                         placeholder="Coupon code">
                                     <button onclick="document.getElementById('mainCA').click()" id="secondaryCA"
-                                        class=" font-semibold text-white bg-[var(--pnk)]  px-[22px] py-[16px] rounded-r-lg hover:bg-[#0FA2EA] disabled:bg-gray-500 disabled:text-gray-300">Apply</button>
+                                        class=" font-semibold text-white bg-[var(--pnk)]  px-[16px] py-[10px] rounded-r-lg hover:bg-[#0FA2EA] disabled:bg-gray-500 disabled:text-gray-300">Apply</button>
                                 </div>
                             </div>
 
                             <!-- make purchase -->
 
-                            <div class="max-w-[342px] bg-base-100 p-3 md:p-6 rounded-lg mt-6">
+                            <div class="max-w-[342px] bg-base-100 px-1 py-3 sm:px-3 md:px-6 rounded-lg mt-6">
                                 <div id="secondaryDisplay" class="text-lg leading-loose">
 
                                 </div>
@@ -377,7 +377,7 @@
                                 <div class="text-center ">
                                     <h1>&nbsp;</h1>
                                     <button onclick="document.getElementById('mainMP').click()" id="secondaryMP"
-                                        class="font-semibold text-white bg-[var(--pnk)]  px-[22px] py-[16px] rounded-lg hover:bg-[#0FA2EA] disabled:bg-gray-500 disabled:text-gray-300">
+                                        class="font-semibold text-white bg-[var(--pnk)]  px-[16px] py-[16px] rounded-lg hover:bg-[#0FA2EA] disabled:bg-gray-500 disabled:text-gray-300">
                                         Make Purchase
                                     </button>
                                 </div>
