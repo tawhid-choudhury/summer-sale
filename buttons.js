@@ -2,29 +2,28 @@ document.getElementById("mainMP").disabled = true;
 let total = 0.0;
 let discount = 0.0;
 let gtotal = 0.0;
-
+updateSecondary();
+updateDisplay();
+updateSecondaryBtnCA();
+updateSecondaryBtnMP();
 // MAIN FUNCTIONS START
 function unlockCA() {
   const code = document.getElementById("mainCInput").value;
   if (code === "SELL200") {
     document.getElementById("mainCA").disabled = false;
-    document.getElementById("secondaryCA").disabled =
-      document.getElementById("mainCA").disabled;
+    updateSecondaryBtnCA();
   } else {
     document.getElementById("mainCA").disabled = true;
-    document.getElementById("secondaryCA").disabled =
-      document.getElementById("mainCA").disabled;
+    updateSecondaryBtnCA();
   }
 }
 function unlockMP() {
   if (total !== 0.0) {
     document.getElementById("mainMP").disabled = false;
-    document.getElementById("secondaryMP").disabled =
-      document.getElementById("mainMP").disabled;
+    updateSecondaryBtnMP();
   } else {
     document.getElementById("mainMP").disabled = true;
-    document.getElementById("secondaryMP").disabled =
-      document.getElementById("mainMP").disabled;
+    updateSecondaryBtnMP();
   }
 }
 //   calling unlockCA
@@ -54,22 +53,27 @@ document.getElementById("mainCA").addEventListener("click", function () {
   document.getElementById("mainTotals").childNodes[3].childNodes[1].innerHTML =
     " " + discount.toFixed(2) + "TK";
   updateSecondary();
+  updateDisplay();
 });
 // MAIN FUNCTIONS END
 //
 //
 //
-document.getElementById("secondaryCA").disabled =
-  document.getElementById("mainCA").disabled;
-
-document.getElementById("secondaryMP").disabled =
-  document.getElementById("mainMP").disabled;
-
+function updateSecondaryBtnCA() {
+  document.getElementById("secondaryCA").disabled =
+    document.getElementById("mainCA").disabled;
+}
+function updateSecondaryBtnMP() {
+  document.getElementById("secondaryMP").disabled =
+    document.getElementById("mainMP").disabled;
+}
 // totals
 function updateSecondary() {
   document.getElementById("secondaryTotals").innerHTML =
     document.getElementById("mainTotals").innerHTML;
 }
 //   displays
-document.getElementById("secondaryDisplay").innerHTML =
-  document.getElementById("mainDisplay").innerHTML;
+function updateDisplay() {
+  document.getElementById("secondaryDisplay").innerHTML =
+    document.getElementById("mainDisplay").innerHTML;
+}
