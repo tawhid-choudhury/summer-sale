@@ -52,7 +52,7 @@
                         <!-- <div class="flex flex-wrap justify-between gap-6"> -->
                         <!-- card-1 -->
                         <div class="mt-8">
-                            <div id="k1"
+                            <div onclick="divClicked(this)" id="k1"
                                 class="card bg-base-100 md:w-[342px] m-auto lg:m-0 hover:bg-[#0fa1eaa1] hover:text-white">
                                 <figure class="">
                                     <div
@@ -75,7 +75,7 @@
                         </div>
                         <!-- card-2 -->
                         <div class="mt-8">
-                            <div id="k2"
+                            <div onclick="divClicked(this)" id="k2"
                                 class="card bg-base-100 md:w-[342px] m-auto lg:m-0 hover:bg-[#0fa1eaa1] hover:text-white">
                                 <figure class="">
                                     <div
@@ -100,7 +100,7 @@
 
                         <!-- card-3 -->
                         <div class="mt-8">
-                            <div id="k3"
+                            <div onclick="divClicked(this)" id="k3"
                                 class="card bg-base-100 md:w-[342px] m-auto lg:m-0 hover:bg-[#0fa1eaa1] hover:text-white">
                                 <figure class="">
                                     <div
@@ -131,7 +131,7 @@
                         <!-- <div class="flex flex-wrap justify-between gap-6"> -->
                         <!-- card-1 -->
                         <div class="mt-8">
-                            <div id="s1"
+                            <div onclick="divClicked(this)" id="s1"
                                 class="card bg-base-100 md:w-[342px] m-auto lg:m-0 hover:bg-[#0fa1eaa1] hover:text-white">
                                 <figure class="">
                                     <div
@@ -155,7 +155,7 @@
                         </div>
                         <!-- card-2 -->
                         <div class="mt-8">
-                            <div id="s2"
+                            <div onclick="divClicked(this)" id="s2"
                                 class="card bg-base-100 md:w-[342px] m-auto lg:m-0 hover:bg-[#0fa1eaa1] hover:text-white">
                                 <figure class="">
                                     <div
@@ -180,7 +180,7 @@
 
                         <!-- card-3 -->
                         <div class="mt-8">
-                            <div id="s3"
+                            <div onclick="divClicked(this)" id="s3"
                                 class="card bg-base-100 md:w-[342px] m-auto lg:m-0 hover:bg-[#0fa1eaa1] hover:text-white">
                                 <figure class="">
                                     <div
@@ -211,7 +211,7 @@
                         <!-- <div class="flex flex-wrap justify-between gap-6"> -->
                         <!-- card-1 -->
                         <div class="mt-8">
-                            <div id="f1"
+                            <div onclick="divClicked(this)" id="f1"
                                 class="card bg-base-100 md:w-[342px] m-auto lg:m-0 hover:bg-[#0fa1eaa1] hover:text-white">
                                 <figure class="">
                                     <div
@@ -235,7 +235,7 @@
                         </div>
                         <!-- card-2 -->
                         <div class="mt-8">
-                            <div id="f2"
+                            <div onclick="divClicked(this)" id="f2"
                                 class="card bg-base-100 md:w-[342px] m-auto lg:m-0 hover:bg-[#0fa1eaa1] hover:text-white">
                                 <figure class="">
                                     <div
@@ -260,7 +260,7 @@
 
                         <!-- card-3 -->
                         <div class="mt-8">
-                            <div id="f3"
+                            <div onclick="divClicked(this)" id="f3"
                                 class="card bg-base-100 md:w-[342px] m-auto lg:m-0 hover:bg-[#0fa1eaa1] hover:text-white">
                                 <figure class="">
                                     <div
@@ -291,7 +291,8 @@
                     <div class="md:max-w-[342px] bg-base-100 p-3 md:p-6 rounded-lg">
                         <h4 class="text-2xl font-normal">Have coupon?</h4>
                         <div class="flex max-w-[294px] gap-0 mt-4 text-xl">
-                            <input class="max-w-[194px] border-[1px] p-4 rounded-l-lg" type="text"
+                            <input id="mainCInput" onkeyup="ChangeFunction1(this)"
+                                class="max-w-[194px] border-[1px] p-4 rounded-l-lg" type="text"
                                 placeholder="Coupon code">
                             <button id="mainCA"
                                 class=" font-semibold text-white bg-[var(--pnk)]  px-[22px] py-[16px] rounded-r-lg hover:bg-[#0FA2EA] disabled:bg-gray-500 disabled:text-gray-300"
@@ -322,17 +323,17 @@
                             <!--  -->
                             <!-- modal -->
                             <dialog id="my_modal_1" class="modal  modal-bottom sm:modal-middle">
-                                <form method="dialog" class="modal-box">
-                                    <div class="flex flex-col items-center justify-center lg:px-[111px] lg:py-[104px] ">
+                                <form method="dialog" class="modal-box lg:max-w-[600px] lg:py-[100px]">
+                                    <div class="flex flex-col items-center justify-center">
                                         <div class="m-auto">
                                             <img src="./images/congo.png" alt="congo">
                                         </div>
-                                        <h3 class="font-bold text-5xl font-bold mt-10">Congratulations</h3>
+                                        <h3 class="font-bold text-3xl md:text-5xl font-bold mt-10">Congratulations</h3>
                                         <p class="py-4 text-[#11111180] text-xl">You Have Purchased the Products</p>
-                                        <div class="modal-action justify-center">
+                                        <div class="modal-action justify-center -mt-3">
                                             <!-- if there is a button in form, it will close the modal -->
                                             <button id="goHome"
-                                                class=" w-[294px] font-semibold text-white bg-[var(--pnk)]  px-[45px] py-[16px] rounded-lg hover:bg-[#0FA2EA] mt-10">Go
+                                                class=" font-semibold text-white bg-[var(--pnk)]  px-[45px] py-[16px] rounded-lg hover:bg-[#0FA2EA] mt-10">Go
                                                 Home</button>
                                         </div>
                                     </div>
@@ -354,9 +355,10 @@
                             <div class="max-w-[342px] bg-base-100 p-3 md:p-6 rounded-lg">
                                 <h4 class="text-lg font-normal">Have coupon?</h4>
                                 <div class="flex max-w-[294px] gap-0 mt-4">
-                                    <input class="max-w-[194px] border-[1px] p-4 rounded-l-lg" type="text"
+                                    <input id="secondaryCInput" onkeyup="ChangeFunction2(this)"
+                                        class="max-w-[194px] border-[1px] p-4 rounded-l-lg" type="text"
                                         placeholder="Coupon code">
-                                    <button id="secondaryCA"
+                                    <button onclick="document.getElementById('mainCA').click()" id="secondaryCA"
                                         class=" font-semibold text-white bg-[var(--pnk)]  px-[22px] py-[16px] rounded-r-lg hover:bg-[#0FA2EA] disabled:bg-gray-500 disabled:text-gray-300">Apply</button>
                                 </div>
                             </div>
@@ -387,7 +389,8 @@
             </div>
         </div>
     </main>
-    <script src="./index.js"></script>
+    <script src="./buttons.js"></script>
+    <script src="./valueupdates.js"></script>
 </body>
 
 </html>
