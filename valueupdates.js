@@ -16,6 +16,7 @@ function divClicked(e) {
   ).innerHTML += `<h3 class="font-semibold">${c}. ${name}</h3>`;
   c++;
   updateDisplay();
+  unlockCA();
 }
 
 function updateGT() {

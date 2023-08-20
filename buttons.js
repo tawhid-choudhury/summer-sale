@@ -8,8 +8,7 @@ updateSecondaryBtnCA();
 updateSecondaryBtnMP();
 // MAIN FUNCTIONS START
 function unlockCA() {
-  const code = document.getElementById("mainCInput").value;
-  if (code === "SELL200") {
+  if (total >= 200) {
     document.getElementById("mainCA").disabled = false;
     updateSecondaryBtnCA();
   } else {
@@ -48,12 +47,19 @@ document.getElementById("mainMP").addEventListener("click", function (event) {
 
 // Apply coupon button clicked
 document.getElementById("mainCA").addEventListener("click", function () {
-  discount = (total * 20) / 100;
-  updateGT();
-  document.getElementById("mainTotals").childNodes[3].childNodes[1].innerHTML =
-    " " + discount.toFixed(2) + "TK";
-  updateSecondary();
-  updateDisplay();
+  const code = document.getElementById("mainCInput").value;
+  if (code === "SELL200") {
+    discount = (total * 20) / 100;
+    updateGT();
+    document.getElementById(
+      "mainTotals"
+    ).childNodes[3].childNodes[1].innerHTML = " " + discount.toFixed(2) + "TK";
+    updateSecondary();
+    updateDisplay();
+    document.getElementById("mainCInput").value = "";
+  } else {
+    window.alert("INCORRECT CODE");
+  }
 });
 // MAIN FUNCTIONS END
 //
